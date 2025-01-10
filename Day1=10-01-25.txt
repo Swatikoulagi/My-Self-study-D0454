@@ -1,0 +1,59 @@
+package com.demo;
+
+public class First {
+
+	public static void main(String[] args) {
+		int sub1 = 88;                            //initializing subject1 marks                        
+	     int sub2 = 80;
+	     int sub3 = 78;
+	     int sub4 = 44;
+	     int sub5 = 68;
+	     
+	     int total = (sub1+sub2+sub3+sub4+sub5);  // total calculated
+	     
+	     float p = (float)total;  
+	     float percentage = (float) ((p/500.0)*100.0);     // calculate percentage
+
+	        System.out.println("Total: " + total);
+	        System.out.println("Percentage: " + percentage + "%");
+	}
+
+}
+
+
+
+
+
+
+prg-2
+
+package com.demo;
+
+public class Area {
+
+	public static void main(String[] args) {
+		int length = 5;
+		int breadth = 10;
+		int area_rectangle = (length * breadth);
+		
+		 // Triangle
+        int base = 6;
+        int height = 8;
+        double areaTriangle = 0.5 * base * height;
+
+        // Circle
+        double radius = 7;
+        double areaCircle = Math.PI * radius * radius;  // using Math.PI for π
+
+        // Square
+        int side = 4;
+        int areaSquare = side * side;
+        
+	    System.out.println("Area of Rectangle : "+ area_rectangle );
+		System.out.println("Area of Triangle: " + areaTriangle);
+        System.out.println("Area of Circle: " + areaCircle);
+        System.out.println("Area of Square: " + areaSquare);
+
+	}
+
+}
