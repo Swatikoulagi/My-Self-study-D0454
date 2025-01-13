@@ -1,0 +1,27 @@
+class Solution{
+public static void main(String args[]){
+int one=11;
+int two=11;
+    	
+    	boolean res2 = (one > two);              //   greater than--> true   --> false
+    	
+    	System.out.println("greater than : "+ res2);
+    	res2 = (one >= two);                    // greater than equal
+    	System.out.println("greater than equal : "+ res2);
+    	res2  = (one < two);
+    	System.out.println("less than: "+ res2);
+    	res2 = (one <= two);
+    	System.out.println("less than equal: "+ res2);
+res2 = (one == two);
+    	System.out.println("Equal to : "+ res2);
+    	res2  = (one != two);
+    	System.out.println("Not equal to : "+ res2);
+}
+}
+
+Output:-
+      less than equal: true
+     Equal to : true
+     Not equal to : false
+
+
