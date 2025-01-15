@@ -1,0 +1,131 @@
+                                          # Conditional Operator Example:-
+
+package com.demo;
+
+public class Conditional {
+	public static void main(String args[]) {
+	int demo=21;
+	
+	int result;
+	
+	result = ((demo%2) == 0) ? 0:1;    // conditional operator  
+	
+	System.out.println("Result : "+ result);
+
+}
+}
+
+Output:-
+Result : 1
+
+                                        #Logical Operator Example:-
+
+package com.demo;
+
+public class LogicalDemo {
+	public static void main(String args[]) {
+		int first  = 22;
+		int second = 12;
+		
+		boolean result;
+		       
+		result = ((first%2)==0) && ((second%2==0));        // AND operator
+		
+		System.out.println("Result of AND operator : "+ result);
+		
+		
+		result = ((first%2)==1) || ((second%2)==1);            // OR operator
+		System.out.println("Result of OR operator: " + result );
+		
+ 		boolean result1 = !result;                            // NOT operator
+		System.out.println("Result of NOT operator: " + result1 );
+		
+	}
+
+}
+ Output:-
+Result of AND operator : true
+Result of OR operator: false
+Result of NOT operator: true
+
+                                             #Shift Operator Example:-
+
+package com.demo;
+
+public class ShiftDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int shiftone = 100;
+		int shiftwo =  200;
+		
+		
+		int result = (shiftone >> 2);                     // Right Shift
+		System.out.println("Result of Right Shift: "+result); 
+		
+		int result1 = (shiftwo << 1);                     // left shift
+		System.out.println("Result of Left Shift: "+result1);
+
+	}
+
+}
+Output:-
+Result of Right Shift: 25
+Result of Left Shift: 400
+
+                            #Increment and Decrement Operator Example:-
+
+package com.demo;
+
+public class IncrementDecrement_demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int demo = 100;
+		int demo1;
+		
+		demo1 = ++demo;
+		System.out.println("Pre-Increment : "+ demo1);
+		
+		demo1 = --demo;
+		System.out.println("Pre-decrement : "+ demo1);
+		
+		demo1 = demo++;
+		System.out.println("Post-Increment : "+ demo1);
+		
+		demo1 = demo--;
+		System.out.println("Post-decrement : "+ demo1);
+		System.out.println("Final demo: "+ demo);
+
+		int demo2 = demo+2;
+		System.out.println("Final demo2: "+ demo2);
+		
+		demo2 = demo2+2;
+		System.out.println("Final demo2: "+ demo2);
+		
+		
+		demo2+=2;                                        // shorthand operator
+		System.out.println("Final demo2: "+ demo2);
+		
+		demo2+=3;
+		System.out.println("Final demo2: "+ demo2);
+
+
+	}
+
+}
+Output:-
+Pre-Increment : 101
+Pre-decrement : 100
+Post-Increment : 100
+Post-decrement : 101
+Final demo: 100
+Final demo2: 102
+Final demo2: 104
+Final demo2: 106
+Final demo2: 109
+
+
+
+
+
