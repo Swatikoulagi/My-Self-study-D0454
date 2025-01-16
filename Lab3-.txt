@@ -1,0 +1,108 @@
+Lab3:-
+
+Q5.  Write a program to demonstrate all primitive datatypes in Java.
+
+Sol:-
+public class PrimitiveDataTypes {
+
+    public static void main(String[] args) {
+       
+
+        // byte - 8-bit signed integer
+        byte byteVar = 100;
+        System.out.println("byte: " + byteVar);
+
+        // short - 16-bit signed integer
+        short shortVar = 10000;
+        System.out.println("short: " + shortVar);
+
+        // int - 32-bit signed integer
+        int intVar = 100000;
+        System.out.println("int: " + intVar);
+
+        //  long - 64-bit signed integer
+        long longVar = 10000000000L; // 'L' suffix for long literal
+        System.out.println("long: " + longVar);
+
+        // float - 32-bit floating point number
+        float floatVar = 10.5f; // 'f' suffix for float literal
+        System.out.println("float: " + floatVar);
+
+        //  double - 64-bit floating point number
+        double doubleVar = 20.99;
+        System.out.println("double: " + doubleVar);
+
+        // char - 16-bit Unicode character
+        char charVar = 'A';
+        System.out.println("char: " + charVar);
+
+        //  boolean - true or false value
+        boolean booleanVar = true;
+        System.out.println("boolean: " + booleanVar);
+    }
+}
+
+Output:=
+byte: 100
+short: 10000
+int: 100000
+long: 10000000000
+float: 10.5
+double: 20.99
+char: A
+boolean: true
+
+
+Q6. 2. Write a program to input student marks of multiple subject..print total of marks , result depending on percentage.
+
+Sol:=
+package com.demo;
+
+import java.util.Scanner;
+
+public class StudentMarks {
+
+	    public static void main(String[] args) {
+	        Scanner scanner = new Scanner(System.in);
+
+	        String[] subjects = {
+	            "Artificial Intelligence", 
+	            "Deep Learning", 
+	            "Internet of Things", 
+	            "Computer Network", 
+	            "Blockchain Technology"
+	        };
+
+	        int[] marks = new int[subjects.length];
+
+	        int totalMarks = 0;
+	        for (int i = 0; i < subjects.length; i++) {
+	            System.out.print("Enter marks for " + subjects[i] + ": ");
+	            marks[i] = scanner.nextInt();
+	            totalMarks += marks[i];
+	        }
+	        double percentage = (double) totalMarks / subjects.length;
+	        System.out.println("Total Marks: " + totalMarks);
+	        System.out.println("Percentage: " + percentage + "%");
+
+	    
+	        String result = (percentage >= 50) ? "Passed" : "Failed";
+	        System.out.println("Result: " + result);
+
+	        scanner.close();
+	    }
+
+}
+
+Output:=
+Enter marks for Artificial Intelligence: 80
+Enter marks for Deep Learning: 88
+Enter marks for Internet of Things: 92
+Enter marks for Computer Network: 96
+Enter marks for Blockchain Technology: 87
+Total Marks: 443
+Percentage: 88.6%
+Result: Passed
+
+
+
