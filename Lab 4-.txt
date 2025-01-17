@@ -1,0 +1,57 @@
+Lab 4:=
+
+Q7. 1. Write a program to demonstrate  use of  type casting in java.
+  print result after type casting.
+
+Sol:=
+package com.demo;
+
+public class TypeCasting {
+	    public static void main(String[] args) {
+	        
+	        int a = 5;
+	        double b = a;  
+	        System.out.println("Implicit casting (int to double): " + b);
+	        
+	        double x = 8.99;
+	        int y = (int) x;  
+	        System.out.println("Explicit casting (double to int): " + y);
+	    }
+
+
+}
+Output:=
+Implicit casting (int to double): 5.0
+Explicit casting (double to int): 8
+
+
+
+
+
+Q8. Write a program to demonstrate use of local, instance and static variables in java.
+Sol:=
+package com.demo;
+
+public class LocalVariable {
+
+	  // Instance variable
+	  int instanceVariable = 5;
+
+	    // Static variable
+	    static int staticVariable = 10;
+
+	    public static void main(String[] args) {
+	    	 int localVariable = 20;                 //local variable
+	        LocalVariable obj = new LocalVariable();
+
+	        System.out.println("Local Variable: " + localVariable);
+	        System.out.println("Instance Variable: " + obj.instanceVariable);
+	        System.out.println("Static Variable: " + staticVariable);
+	    }
+
+
+}
+Output:-
+Local Variable: 20
+Instance Variable: 5
+Static Variable: 10
