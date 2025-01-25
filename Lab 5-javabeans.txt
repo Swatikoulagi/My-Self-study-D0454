@@ -1,0 +1,190 @@
+Q9. Write a conventional Java class (Bean class) to demonstrate an employee details.
+
+Sol:-
+package com.demo1;
+
+public class Lab5 {
+	
+	public class Employee {
+	    
+	    private String name;
+	    private String position;
+	    private double salary;
+
+	    public Employee(String name, String position, double salary) {
+	        this.name = name;
+	        this.position = position;
+	        this.salary = salary;
+	    }
+
+	
+	    public String getName() {
+	        return name;
+	    }
+
+	
+	    public void setName(String name) {
+	        this.name = name;
+	    }
+
+	    public String getPosition() {
+	        return position;
+	    }
+
+	
+	    public void setPosition(String position) {
+	        this.position = position;
+	    }
+
+	    public double getSalary() {
+	        return salary;
+	    }
+
+	    public void setSalary(double salary) {
+	        this.salary = salary;
+	    }
+
+	    public double calculateIncrement(double percentage) {
+	        return salary + (salary * percentage / 100);
+	    }
+	    
+	    public void printEmployeeDetails() {
+	        System.out.println("Employee Name: " + name);
+	        System.out.println("Position: " + position);
+	        System.out.println("Salary: $" + salary);
+	    }
+	}
+
+
+}
+
+
+public class LabMain {
+    public static void main(String[] args) {
+        Employee emp1 = new Employee("John Doe", "Software Engineer", 60000);
+        Employee emp2 = new Employee("Jane Smith", "Product Manager", 80000);
+        Employee emp3 = new Employee("Alice Brown", "HR ", 50000);
+
+       
+        System.out.println("Employee 1 Details:");
+        emp1.printEmployeeDetails();
+        System.out.println("Incremented Salary (10%): $" + emp1.calculateIncrement(10));
+        System.out.println();
+
+        System.out.println("Employee 2 Details:");
+        emp2.printEmployeeDetails();
+        System.out.println("Incremented Salary (8%): $" + emp2.calculateIncrement(8));
+        System.out.println();
+
+        System.out.println("Employee 3 Details:");
+        emp3.printEmployeeDetails();
+        System.out.println("Incremented Salary (5%): $" + emp3.calculateIncrement(5));
+    }
+}
+
+
+
+Q10. Write a conventional Java class (Bean class) to demonstrate student  details.
+
+Sol:=
+
+public class Student {
+  
+    private String name;
+    private String rollNumber;
+    private int[] marks; 
+    private int totalMarks;
+
+    public Student(String name, String rollNumber, int[] marks) {
+        this.name = name;
+        this.rollNumber = rollNumber;
+        this.marks = marks;
+        this.totalMarks = marks.length * 100; 
+    }
+
+    
+    public String getName() {
+        return name;
+    }
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public String getRollNumber() {
+        return rollNumber;
+    }
+
+    public void setRollNumber(String rollNumber) {
+        this.rollNumber = rollNumber;
+    }
+
+    public int[] getMarks() {
+        return marks;
+    }
+
+    public void setMarks(int[] marks) {
+        this.marks = marks;
+    }
+
+    public double calculatePercentage() {
+        int obtainedMarks = 0;
+        for (int mark : marks) {
+            obtainedMarks += mark;
+        }
+        return (double) obtainedMarks / totalMarks * 100;
+    }
+
+    public void printStudentDetails() {
+        System.out.println("Student Name: " + name);
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.print("Marks: ");
+        for (int mark : marks) {
+            System.out.print(mark + " ");
+        }
+        System.out.println();
+    }
+    public void printResult() {
+        double percentage = calculatePercentage();
+        System.out.println("Percentage: " + percentage + "%");
+        if (percentage >= 50) {
+            System.out.println("Result: Pass");
+        } else {
+            System.out.println("Result: Fail");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        int[] marks1 = {85, 90, 80, 70, 95}; 
+        int[] marks2 = {40, 45, 55, 60, 50}; 
+        int[] marks3 = {70, 75, 80, 85, 90}; 
+
+        Student student1 = new Student("Shruti", "S12345", marks1);
+        Student student2 = new Student("Revati", "S12346", marks2);
+        Student student3 = new Student("Swati", "S12347", marks3);
+
+        
+        System.out.println("Student 1 Details:");
+        student1.printStudentDetails();
+        student1.printResult();
+        System.out.println();
+
+        System.out.println("Student 2 Details:");
+        student2.printStudentDetails();
+        student2.printResult();
+        System.out.println();
+
+        System.out.println("Student 3 Details:");
+        student3.printStudentDetails();
+        student3.printResult();
+    }
+}
+
+
+
+ 
