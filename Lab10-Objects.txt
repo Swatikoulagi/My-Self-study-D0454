@@ -1,0 +1,89 @@
+Q19. . Assign and print the roll number, phone number and address of two students having names "Sam" and "John" respectively by creating two objects of class 'Student'.
+
+Sol:=
+ package com.demo1;
+
+ public class Student {
+    int rollNumber;
+    String phoneNumber;
+    String address;
+
+    public Student(int rollNumber, String phoneNumber, String address) {
+        this.rollNumber = rollNumber;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+    }
+
+    public void displayDetails() {
+        System.out.println("Roll Number: " + rollNumber);
+        System.out.println("Phone Number: " + phoneNumber);
+        System.out.println("Address: " + address);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student sam = new Student(1, "1234567890", "123 Elm Street");
+        Student john = new Student(2, "9876543210", "456 Oak Avenue");
+
+        System.out.println("Student: Sam");
+        sam.displayDetails();
+        System.out.println();
+
+        System.out.println("Student: John");
+        john.displayDetails();
+    }
+}
+Output:=
+Student: Sam
+Roll Number: 1
+Phone Number: 123-456-7890
+Address: 123 Elm Street
+
+Student: John
+Roll Number: 2
+Phone Number: 987-654-3210
+Address: 456 Oak Avenue
+
+Q20. Print the average of three numbers entered by user by creating a class named 'Average' having a method to calculate and print the average.
+
+Sol:=
+package com.demo1;
+
+import java.util.Scanner;
+
+public class Average {
+   public void calculateAverage(int num1, int num2, int num3) {
+     double average = (num1 + num2 + num3) / 3.0;
+     System.out.println("The average of the three numbers is: " + average);
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+
+        Average avg = new Average();
+
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+        
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+        
+        System.out.print("Enter the third number: ");
+        int num3 = scanner.nextInt();
+        
+        avg.calculateAverage(num1, num2, num3);
+        
+        scanner.close();
+    }
+}
+Output:=
+Enter the first number: 10
+Enter the second number: 20
+Enter the third number: 30
+The average of the three numbers is: 20.0
+
+
