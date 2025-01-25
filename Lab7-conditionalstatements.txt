@@ -1,0 +1,81 @@
+Q13. Write a program to print greatest out of three entered integer.
+
+Sol:=
+package com.demo1;
+
+import java.util.Scanner;
+
+	public class GreatestOfThree {
+	    public static void main(String[] args) {
+	 
+	        Scanner scanner = new Scanner(System.in);
+
+	        System.out.print("Enter first number: ");
+	        int num1 = scanner.nextInt();
+
+	        System.out.print("Enter second number: ");
+	        int num2 = scanner.nextInt();
+
+	        System.out.print("Enter third number: ");
+	        int num3 = scanner.nextInt();
+
+	        int greatest = num1;
+
+	        if (num2 > greatest) {
+	            greatest = num2;
+	        }
+	        if (num3 > greatest) {
+	            greatest = num3;
+	        }
+	        
+	        System.out.println("The greatest number is: " + greatest);
+
+	        scanner.close();
+	    }
+}
+
+Output:=
+Enter first number: 56
+Enter second number: 78
+Enter third number: 88
+The greatest number is: 88
+
+Q13. Write a  program to print whether entered number is Armstrong number or not.
+
+Sol:=
+package com.demo1;
+
+import java.util.Scanner;
+
+	public class ArmstrongNumber {
+	    public static void main(String[] args) {
+	 
+	        Scanner scanner = new Scanner(System.in);
+
+	        System.out.print("Enter a number: ");
+	        int number = scanner.nextInt();
+            int originalNumber = number;
+	        int sum = 0;
+            int numberOfDigits = String.valueOf(number).length();
+	        while (number != 0) {
+	            int digit = number % 10; 
+	            sum += Math.pow(digit, numberOfDigits);
+	            number = number / 10; 
+	        }
+
+	        if (sum == originalNumber) {
+	            System.out.println(originalNumber + " is an Armstrong number.");
+	        } else {
+	            System.out.println(originalNumber + " is not an Armstrong number.");
+	        }
+
+	        scanner.close();
+	    }
+	}
+
+Output:=
+Enter a number: 543
+543 is not an Armstrong number.
+
+
+
