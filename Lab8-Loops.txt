@@ -1,0 +1,88 @@
+Q15.  Write a program to demonstrate use of break & continue statements.
+
+Sol:=
+package com.demo1;
+
+public class BreakContinueExample {
+
+	    public static void main(String[] args) {
+	        
+	        System.out.println("Using break statement:");
+	        for (int i = 1; i <= 10; i++) {
+	            if (i == 6) {
+	                break;  
+	            }
+	            System.out.println(i);  
+	        }
+	       
+	        System.out.println("\n--- Next Section ---\n");
+	        
+	        System.out.println("Using continue statement:");
+	        for (int i = 1; i <= 10; i++) {
+	            if (i == 6) {
+	                continue;  
+	            }
+	            System.out.println(i);
+	        }
+	    }
+	}
+
+Output:=
+Using break statement:
+1
+2
+3
+4
+5
+
+--- Next Section ---
+
+Using continue statement:
+1
+2
+3
+4
+5
+7
+8
+9
+10
+
+
+Q16. Write a java program to print below mentioned pattern.
+
+                         *
+
+                     *      *
+
+                 *       *      *
+
+              *      *        *      *
+Sol:=
+package com.demo1;
+
+public class StarPattern {
+	    public static void main(String[] args) {
+	     
+	        int rows = 4;
+	        for (int i = 1; i <= rows; i++) {
+	            for (int j = 1; j <= rows - i; j++) {
+	                System.out.print("   ");
+	            }
+
+	            for (int j = 1; j <= i; j++) {
+	                System.out.print(" *   ");  
+	            }
+
+	            System.out.println();
+	        }
+	    }
+	}
+
+Output:=
+          *   
+       *    *   
+    *    *    *   
+ *    *    *    *   
+
+
