@@ -1,0 +1,128 @@
+Q23. Create an interface called "BankAccount" with methods called "deposit" and "withdraw". Create a class called "CheckingAccount" that implements the BankAccount interface and implements the "deposit" and "withdraw" methods. Create an object of the CheckingAccount class and call both the "deposit" and "withdraw" methods.
+
+Sol:=
+package com.demo1;
+
+interface BankAccount {
+ void deposit(double amount); 
+ void withdraw(double amount); 
+}
+
+class CheckingAccount implements BankAccount {
+ private double balance;  
+
+ public CheckingAccount(double initialBalance) {
+     balance = initialBalance;
+ }
+
+ @Override
+ public void deposit(double amount) {
+     if (amount > 0) {
+         balance += amount;
+         System.out.println("Deposited: " + amount);
+     } else {
+         System.out.println("Deposit amount must be greater than zero.");
+     }
+ }
+
+ @Override
+ public void withdraw(double amount) {
+     if (amount > 0 && amount <= balance) {
+         balance -= amount;
+         System.out.println("Withdrawn: " + amount);
+     } else {
+         System.out.println("Insufficient balance or invalid withdrawal amount.");
+     }
+ }
+
+ public void displayBalance() {
+     System.out.println("Current balance: " + balance);
+ }
+}
+
+public class Bottle {
+ public static void main(String[] args) {
+     CheckingAccount account = new CheckingAccount(1000);
+
+     account.displayBalance();
+     account.deposit(500);  
+
+     account.withdraw(200); 
+     account.displayBalance();
+ }
+}
+Output:=
+Current balance: 1000.0
+Deposited: 500.0
+Withdrawn: 200.0
+Current balance: 1300.0
+
+
+
+Q24. Write a Java program to create an interface Resizable with methods resizeWidth(int width) and resizeHeight(int height) that allow an object to be resized. Create a class Rectangle that implements the Resizable interface and implements the resize methods.
+
+Sol:=
+package com.demo1;
+
+interface Resizable {
+    void resizeWidth(int width);  
+    void resizeHeight(int height); 
+}
+
+class Rectangle implements Resizable {
+    private int width;  
+    private int height;  
+
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public void resizeWidth(int width) {
+        if (width > 0) {
+            this.width = width;
+            System.out.println("Width resized to: " + this.width);
+        } else {
+            System.out.println("Width must be a positive value.");
+        }
+    }
+
+    @Override
+    public void resizeHeight(int height) {
+        if (height > 0) {
+            this.height = height;
+            System.out.println("Height resized to: " + this.height);
+        } else {
+            System.out.println("Height must be a positive value.");
+        }
+    }
+
+    public void displaySize() {
+        System.out.println("Rectangle size - Width: " + width + ", Height: " + height);
+    }
+}
+
+public class MainC{
+    public static void main(String[] args) {
+        Rectangle rectangle = new Rectangle(10, 5);
+
+        System.out.println("Initial size of the rectangle:");
+        rectangle.displaySize();
+
+        rectangle.resizeWidth(15);  
+        rectangle.resizeHeight(10); 
+
+        System.out.println("\nAfter resizing:");
+        rectangle.displaySize();
+    }
+
+}
+Output:=
+Initial size of the rectangle:
+Rectangle size - Width: 10, Height: 5
+Width resized to: 15
+Height resized to: 10
+
+After resizing:
+Rectangle size - Width: 15, Height: 10
