@@ -1,0 +1,81 @@
+Q28.  Write a class with multiple area methods. Implement compile time polymorphism using method overloading.
+
+Sol:-
+
+class Shape {
+
+    public double area(double side) {
+        return side * side;                                           // Area = side * side
+    }
+
+    public double area(double length, double width) {
+        return length * width;                                      // Area = length * width
+    }
+
+    public double area(float radius) {
+        return 3.14 * radius * radius;                        //Area=3.14 * radius * radius;
+    }
+}
+
+public class ShapeTest {
+    public static void main(String[] args) {
+        Shape shape = new Shape();
+
+        System.out.println("Area of Square: " + shape.area(4));     
+        System.out.println("Area of Rectangle: " + shape.area(5, 3));  
+        System.out.println("Area of Circle: " + shape.area(7.5f));    
+    }
+}
+
+Output:=
+Area of Square: 16.0
+Area of Rectangle: 15.0
+Area of Circle: 176.71423
+
+Q29.   Write a class with its child class Implement run time polymorphism using method overriding.
+
+Sol:=
+package com.demo1;
+
+class Animal {
+
+ public void sound() {
+     System.out.println("Animal makes a sound");
+ }
+}
+
+class Dog extends Animal {
+ @Override
+ public void sound() {
+     System.out.println("Dog barks");
+ }
+}
+
+class Cat extends Animal {
+
+ @Override
+ public void sound() {
+     System.out.println("Cat meows");
+ }
+}
+
+public class TestPolymorphism {
+ public static void main(String[] args) {
+     Animal myAnimal = new Animal();   
+     Animal myDog = new Dog();        
+     Animal myCat = new Cat();       
+
+     myAnimal.sound(); 
+     myDog.sound();     
+     myCat.sound();    
+ }
+}
+
+Output:=
+Animal makes a sound
+Dog barks
+Cat meows
+
+
+
+
