@@ -1,0 +1,98 @@
+Q26.  Write a Java program to create an interface Shape with the getArea() method. Create three classes Rectangle, Circle, and Triangle that implement the Shape interface.
+Implement the getArea() method for each of the three classes.
+
+Sol:=
+
+package com.demo1;
+
+interface Shape {
+    double getArea();
+}
+class Rectangle implements Shape {
+    private double length, width;
+
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    public double getArea() {
+        return length * width;
+    }
+}
+
+class Circle implements Shape {
+    private double radius;
+    private static final double PI = 3.14;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double getArea() {
+        return PI * radius * radius;
+    }
+}
+
+class Triangle implements Shape {
+    private double base, height;
+
+    public Triangle(double base, double height) {
+        this.base = base;
+        this.height = height;
+    }
+
+    public double getArea() {
+        return 0.5 * base * height;
+    }
+}
+
+public class ShapeTest {
+    public static void main(String[] args) {
+        Shape rectangle = new Rectangle(12, 6);
+        Shape circle = new Circle(5);
+        Shape triangle = new Triangle(4, 4);
+
+        System.out.println("Area of Rectangle: " + rectangle.getArea());
+        System.out.println("Area of Circle: " + circle.getArea());
+        System.out.println("Area of Triangle: " + triangle.getArea());
+    }
+}
+
+Output:=
+Area of Rectangle: 72.0
+Area of Circle: 78.53975
+Area of Triangle: 8.0
+
+Q27.  To write a Java program to Employee salary details using interface.
+
+Sol:=
+
+package com.demo1;
+
+interface Salary {
+ double calculateSalary(); 
+
+}
+
+class Employee implements Salary {
+ double basicSalary;
+
+ public Employee(double basicSalary) {
+     this.basicSalary = basicSalary;
+ }
+
+ public double calculateSalary() {
+     return basicSalary; 
+ }
+}
+
+public class EmployeeSalary {
+ public static void main(String[] args) {
+     Employee emp = new Employee(10000);
+     System.out.println("Total Salary: " + emp.calculateSalary());
+ }
+}
+
+Output:=
+Total Salary: 10000.0
